@@ -1,0 +1,94 @@
+{% extends "navbar.html" %} {% block about %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+    }
+    
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .section {
+        margin-bottom: 40px;
+    }
+    
+    .section h2 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+    
+    .section p {
+        line-height: 1.6;
+        color: #555;
+    }
+    
+    .section:last-child {
+        margin-bottom: 0;
+    }
+    /* Responsive */
+    
+    @media only screen and (max-width: 600px) {
+        .container {
+            padding: 10px;
+        }
+    }
+</style>
+
+<div class="container">
+    <h1>About Us</h1>
+
+    <div class="section">
+        <h2>Who We Are</h2>
+        <p>Welcome to Pet Finder, where we're dedicated to bringing joy to the lives of animals and people alike. Our team is comprised of passionate animal lovers who believe that every pet deserves a loving home.</p>
+        <p>Founded in 2010, Pet Finder has since become one of the leading platforms for pet adoption, connecting thousands of animals with caring individuals and families across the globe.</p>
+    </div>
+
+    <div class="section">
+        <h2>Our Mission</h2>
+        <p>Our mission is simple: to rescue, rehabilitate, and rehome animals in need. We work tirelessly to ensure that every animal in our care receives the love, attention, and medical treatment they deserve.</p>
+        <p>At Pet Finder, we're committed to promoting responsible pet ownership and ending pet homelessness through adoption, education, and advocacy.</p>
+    </div>
+
+    <div class="section">
+        <h2>Why Choose Us</h2>
+        <p>Choosing Pet Finder means choosing a platform that prioritizes the well-being of animals above all else. Here's why thousands of people trust us to help them find their perfect pet:</p>
+        <ul>
+            <li>Extensive Network: We partner with shelters, rescues, and animal welfare organizations to provide a wide selection of adoptable pets.</li>
+            <li>User-Friendly Interface: Our website and mobile app are designed to make the adoption process easy, convenient, and enjoyable.</li>
+            <li>Dedicated Support: Our team of animal experts and customer service representatives are here to assist you every step of the way.</li>
+            <li>Community Engagement: Join our community of pet lovers and advocates who share a common passion for animals.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Get Involved</h2>
+        <p>There are many ways to get involved and support our mission:</p>
+        <ul>
+            <li>Adopt: Consider adopting a pet from our platform and give them a forever home.</li>
+            <li>Donate: Your generous donations help us provide food, shelter, and medical care to animals in need.</li>
+            <li>Volunteer: Join our team of volunteers and make a difference in the lives of animals.</li>
+            <li>Spread the Word: Help us raise awareness about pet adoption and responsible pet ownership.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, suggestions, or feedback, please don't hesitate to reach out to us. You can contact us via email at <a href="mailto:info@petfinder.com">info@petfinder.com</a> or give us a call at <a href="tel:+1800PETLOVE">1-800-PET-LOVE</a>.</p>
+        <p>We're located at:</p>
+        <p>123 Pet Lover's Lane<br> City, State, Zip Code</p>
+    </div>
+</div>{% endblock about %}
