@@ -55,10 +55,10 @@
                         </ul>
                         <ul class="nav navbar-nav">
                             <li>
-                                <form action="" class="navbar-form">
+                                <form action="/search" class="navbar-form">
                                     <div class="form-group">
                                         <div class="input-group">
-                                            <input type="search" name="search" id="" placeholder="Search Anything Here..." class="form-control">
+                                            <input type="search" name="query" id="" placeholder="Search Anything Here..." class="form-control">
                                             <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
                                         </div>
                                     </div>
@@ -67,15 +67,15 @@
                         </ul>
 
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="admin/"><span class="glyphicon glyphicon-user"></span> Admin </a></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout </a>
+                            <li><a href="admin/"><span class="glyphicon glyphicon-user"></span> Admin </a></li>{% if request.user.is_authenticated %}{{request.user.email}}
+                            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout </a>{% else %}
                                 <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Login / Sign Up <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
 
                                         <li><a href="/loginp">Login</a></li>
                                         <li><a href="/signupp">Sign Up</a></li>
                                     </ul>
-                                </li>
+                                </li> {% endif %}
                         </ul>
                     </div>
                 </div>
