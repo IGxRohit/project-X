@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PET FINDER</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url("https://4kwallpapers.com/images/walls/thumbs_3t/4593.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
 </head>
 
 
@@ -60,12 +68,14 @@
 
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="admin/"><span class="glyphicon glyphicon-user"></span> Admin </a></li>
-                            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Login / Sign Up <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Login</a></li>
-                                    <li><a href="#">Sign Up</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout </a>
+                                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Login / Sign Up <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+
+                                        <li><a href="/loginp">Login</a></li>
+                                        <li><a href="/signupp">Sign Up</a></li>
+                                    </ul>
+                                </li>
                         </ul>
                     </div>
                 </div>
@@ -75,7 +85,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    {% block home %}{% endblock home %} {% block about %}{% endblock about %} {% block contact %}{% endblock contact %}
+    {% block home %}{% endblock home %} {% block about %}{% endblock about %} {% block contact %}{% endblock contact %}{% block login %}{% endblock login %}{% block signup %}{% endblock signup %}
 
 
 </body>

@@ -5,5 +5,7 @@ from App import views
 urlpatterns = [
     path("",views.index,name="home"),
     path("aboutUs",views.about,name="about"),
-    path("contact",views.contact,name="contact")
+    path("contact",views.contact,name="contact"),
+    path("loginp",views.loginp,name="loginp"),
+    path("signupp",views.signupp,name="signupp"),
 ]

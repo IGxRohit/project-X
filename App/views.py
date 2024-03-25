@@ -12,3 +12,7 @@ def about(request):
         return render(request,"aboutus.html")
 def contact(request):
         return render(request,"contactus.html")
+def loginp(request):
+        return render(request,"login.html")
+def signupp(request):
+        return render(request,"signup.html")
