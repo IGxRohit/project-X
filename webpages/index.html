@@ -76,13 +76,14 @@
     * {
         box-sizing: border-box;
     }
-    
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 20px;
-    }
-    
+</style>
+<div class="container">
+    <div class="image-container">
+
+        <img src="https://pixnio.com/free-images/2019/02/11/2019-02-11-11-47-51-960x720.jpg" alt="Your Image">
+    </div>
+</div>
+<style>
     .card-container {
         display: flex;
         flex-wrap: wrap;
@@ -108,14 +109,14 @@
             width: calc(100% - 40px);
         }
     }
+    
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
 </style>
-<div class="container">
-    <div class="image-container">
-
-        <img src="https://pixnio.com/free-images/2019/02/11/2019-02-11-11-47-51-960x720.jpg" alt="Your Image">
-    </div>
-</div>
-<h1 id="heading" class="heading" style="font-family: cursive;font-weight: bold;font-style: oblique;">AVAILABLE PETS</h1>
+<h1 id="heading" class="heading" style="font-family: cursive;font-weight: bold;font-style: oblique;text-align: center;">AVAILABLE PETS</h1>
 <ul>
     {% for i in pets %}
     <div class="card-container">

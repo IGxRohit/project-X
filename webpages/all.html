@@ -1,0 +1,46 @@
+{% extends "navbar.html" %}{% block all %}
+<style>
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .card {
+        margin: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        width: 300px;
+        transition: transform 0.3s;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .card {
+            width: calc(100% - 40px);
+        }
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+</style>
+<h1 id="heading" class="heading" style="font-family: cursive;font-weight: bold;font-style: oblique;text-align: center;">AVAILABLE PETS</h1>
+<ul>
+    {% for i in pets %}
+    <div class="card-container">
+        <div class="card">
+            <img src="/media/{{i.image}}" alt="image here" style="max-width: 250px;">
+            <h2>{{i.name}}</h2>
+            <p>{{i.breed}}</p>
+
+        </div>
+    </div>{% endfor %}
+</ul>{% endblock all %}
