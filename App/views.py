@@ -8,6 +8,7 @@ from App.models import contactus
 from django.contrib import messages
 
 
+
 # Create your views here.
 
 # index page
@@ -26,6 +27,9 @@ def searchpet(request):
         srch=request.GET["query"]
         searchdata=allpets.objects.filter(breed=srch)
         return render(request,"all.html",{"pets":searchdata})
+
+
+
 def contactsave(request):
         if request.method == "POST":
                 name=request.POST.get("c-name")
