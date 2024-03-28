@@ -37,18 +37,18 @@
                             <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Pets <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a href="#">DOGS & PUPPIES</a>
+                                        <a href="all">DOGS & PUPPIES</a>
                                     </li>
-                                    <li><a href="#">CATS & KITTENS</a></li>
+                                    <li><a href="all">CATS & KITTENS</a></li>
                                     <li>
                                         <a href="#">OTHER TYPES OF PETS</a>
                                     </li>
 
                                 </ul>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="#heading">Breed</a>
-                            </li>
+                            </li> -->
                             <li><a href="all">AVAILABLE PETS</a></li>
                             <li><a href="/aboutUs">About Us</a></li>
                             <li><a href="/contact">Contact Us</a></li>
@@ -68,7 +68,8 @@
                         </ul>
 
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="admin/"><span class="glyphicon glyphicon-user"></span> Admin </a></li>{% if request.user.is_authenticated %}{{request.user.email}}
+                            <li><a href="admin/"><span class="glyphicon glyphicon-user"></span> Admin </a></li>{% if request.user.is_authenticated %}
+                            <li style="color:blue;padding-top: 14px;">{{request.user.email}}</li>
                             <li><a href="logouthere"><span class="glyphicon glyphicon-log-in"></span> Logout </a>{% else %}
                                 <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Login / Sign Up <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
@@ -88,6 +89,13 @@
 
     {% block home %}{% endblock home %} {% block about %}{% endblock about %} {% block contact %}{% endblock contact %}{% block login %}{% endblock login %}{% block signup %}{% endblock signup %}{% block all %}{% endblock all %}
 
+
+
+    <footer style="background-color: black; padding: 20px 0; text-align: center;margin-top: 15px;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <p style="margin-bottom: 0;">&copy; 2024 Dog Finder. All rights reserved.</p>
+        </div>
+    </footer>
 
 </body>
 

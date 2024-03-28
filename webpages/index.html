@@ -115,16 +115,60 @@
         margin: 0;
         padding: 20px;
     }
+    
+    .boxx {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .box {
+        flex-basis: calc(33.33% - 10px);
+        /* Adjust width for 3 boxes in a row with spacing */
+        margin-bottom: 20px;
+        /* Adjust spacing between rows */
+        text-align: center;
+    }
+    
+    .box img {
+        width: 100%;
+        height: auto;
+        mix-blend-mode: multiply;
+    }
+    
+    @media (max-width: 768px) {
+        .box {
+            flex-basis: calc(50% - 10px);
+            /* Adjust width for 2 boxes in a row for smaller screens */
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .box {
+            flex-basis: 100%;
+            /* Display 1 box per row for smaller screens */
+        }
+    }
+    
+    p {
+        color: crimson;
+        font-size: larger;
+        font-family: cursive;
+        font-weight: bold;
+    }
 </style>
 <h1 id="heading" class="heading" style="font-family: cursive;font-weight: bold;font-style: oblique;text-align: center;">AVAILABLE PETS</h1>
-<ul>
-    {% for i in pets %}
-    <div class="card-container">
-        <div class="card">
-            <img src="/media/{{i.image}}" alt="image here" style="max-width: 250px;">
-            <h2>{{i.name}}</h2>
-            <p>{{i.breed}}</p>
 
-        </div>
-    </div>{% endfor %}
-</ul>{% endblock home %}
+<div class="container boxx">
+    <div class="box">
+        <a href="all"><img src="https://static.vecteezy.com/system/resources/previews/009/551/676/non_2x/shy-dog-logo-illustration-depicting-shy-dog-suitable-for-pet-company-free-vector.jpg" alt="Pet 1">
+            <p>DOGS</p>
+        </a>
+    </div>
+    <div class="box">
+        <a href="all"><img src="https://media.istockphoto.com/id/1412769962/vector/cute-three-color-cat-waving-paw-cartoon-vector-illustration.jpg?s=612x612&w=0&k=20&c=gxK_VuyURUyPGg0kYSY_h6jaBBPYEhjTl0UXgTxKlkY=" alt="Pet 2">
+            <p>CATS</p>
+        </a>
+    </div>
+    <!-- Add more box elements as needed -->
+</div>{% endblock home %}

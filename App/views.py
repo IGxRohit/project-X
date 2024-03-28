@@ -12,8 +12,7 @@ from django.contrib import messages
 
 # index page
 def index(request):
-        pets = allpets.objects.all
-        return render (request,"index.html",{'pets': pets})
+        return render (request,"index.html")
 
 def about(request):
         return render(request,"aboutus.html")
@@ -26,7 +25,7 @@ def signupp(request):
 def searchpet(request):
         srch=request.GET["query"]
         searchdata=allpets.objects.filter(breed=srch)
-        return render(request,"index.html",{"pets":searchdata})
+        return render(request,"all.html",{"pets":searchdata})
 def contactsave(request):
         if request.method == "POST":
                 name=request.POST.get("c-name")
@@ -34,11 +33,13 @@ def contactsave(request):
                 msg=request.POST.get("c-msg")
                 messageemail=f"""
 
-                Name={name}
-                 email={email}
+                customer Name={name}
+                 customer email={email}
                 
-                message={msg}"""
-                mail = EmailMessage("this is for testing django mail functionality", messageemail, "creative07vibez@gmail.com ", ["rohitpatial121@gmail.com",{email}])
+                 customer message={msg}.
+
+contact them as soon as possible..................:)"""
+                mail = EmailMessage("contact him", messageemail, "creative07vibez@gmail.com ", ["rohitpatial121@gmail.com",{email}])
                 mail.send()
 
                 mydata = contactus(name = name, email = email, msg=  msg)
@@ -46,7 +47,8 @@ def contactsave(request):
                 return redirect("home")
 
 def all(request):
-        return render(request,"all.html")
+        pets = allpets.objects.all
+        return render(request,"all.html",{'pets': pets})
 
 
 def signupdata (request):
@@ -80,6 +82,7 @@ def loginto(request):
 def logouthere(request):
         logout(request)
         return redirect("login")
+
 
 
 

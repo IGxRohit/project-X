@@ -14,5 +14,6 @@ urlpatterns = [
     path("signupdata",views.signupdata,name="signupdata"),
     path("loginto",views.loginto,name="loginto"),
     path("logouthere",views.logouthere,name="logouthere"),
+    
 
 ]
