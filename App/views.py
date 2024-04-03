@@ -17,8 +17,10 @@ def index(request):
 
 def about(request):
         return render(request,"aboutus.html")
+   
 def contact(request):
         return render(request,"contactus.html")
+
 def loginp(request):
         return render(request,"login.html")
 def signupp(request):
@@ -43,13 +45,13 @@ def contactsave(request):
                  customer message={msg}.
 
 contact them as soon as possible..................:)"""
-                mail = EmailMessage("contact him", messageemail, "creative07vibez@gmail.com ", ["rohitpatial121@gmail.com",{email}])
+                mail = EmailMessage("contact", messageemail, "creative07vibez@gmail.com ", ["rohitpatial121@gmail.com",{email}])
                 mail.send()
 
                 mydata = contactus(name = name, email = email, msg=  msg)
                 mydata.save()
                 return redirect("home")
-
+           
 def all(request):
         pets = allpets.objects.all
         return render(request,"all.html",{'pets': pets})
