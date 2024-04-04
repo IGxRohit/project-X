@@ -17,14 +17,32 @@ def index(request):
 
 def about(request):
         return render(request,"aboutus.html")
-   
+
+
+
+
+
+
+
+
+@login_required  
 def contact(request):
         return render(request,"contactus.html")
 
+
+        
+
 def loginp(request):
         return render(request,"login.html")
+
+
+
 def signupp(request):
         return render(request,"signup.html")
+
+
+
+
 def searchpet(request):
         srch=request.GET["query"]
         searchdata=allpets.objects.filter(breed=srch)
@@ -51,7 +69,7 @@ contact them as soon as possible..................:)"""
                 mydata = contactus(name = name, email = email, msg=  msg)
                 mydata.save()
                 return redirect("home")
-           
+@login_required           
 def all(request):
         pets = allpets.objects.all
         return render(request,"all.html",{'pets': pets})
